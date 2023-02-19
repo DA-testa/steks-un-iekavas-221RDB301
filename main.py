@@ -28,17 +28,19 @@ def find_mismatch(text):
     if opening_brackets_stack:
         top = opening_brackets_stack[0]
         return top.position + 1
-    
-    return "Success"
+    else:
+        return "Success"
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    if isinstance(mismatch, int):
-        print(mismatch)
-    else:
-        print("Success")
+    xd = input()
+    if xd[0] == "I":
+        text = input()
+        mismatch = find_mismatch(text)
+        if isinstance(mismatch, int):
+            print(mismatch)
+        else:
+            print("Success")
     # Printing answer, write your code here
 
 
